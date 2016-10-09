@@ -1,289 +1,354 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/github.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script src="assets/js/marked.min.js" type="text/javascript"></script>
+
+    <title>WSO2 API Manager - Publisher API : v0.10.0</title>
+
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <title>WSO2 API Manager by malinthaprasan</title>
-  </head>
 
-  <body>
-    <div id="container">
-      <div class="inner">
+</head>
 
-        <header>
-          <h1>WSO2 API Manager</h1>
-          <h2></h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/malinthaprasan/product-apim/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/malinthaprasan/product-apim/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/malinthaprasan/product-apim" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <pre><code>    ================================================================================
-                                    WSO2 API Manager
-    ================================================================================
-</code></pre>
-
-<hr>
-
-<table>
-<thead>
-<tr>
-<th align="left">Branch</th>
-<th align="left">Build Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">master</td>
-<td align="left"><a href="https://wso2.org/jenkins/job/product-apim"><img src="https://wso2.org/jenkins/job/product-apim/badge/icon" alt="Build Status"></a></td>
-</tr>
-</tbody>
-</table>
-
-<h2>
-<a id="" class="anchor" href="#" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://gitter.im/wso2/product-apim?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/wso2/product-apim"></a>
-</h2>
-
-<p>WSO2 API Manager is a powerful platform for creating, managing, consuming and
-monitoring web APIs. It combines tried and tested SOA best practices with modern
-day API management principles to solve a wide range of enterprise challenges
-associated with API provisioning, governance and integration.</p>
-
-<p>WSO2 API Manager consists of several loosely coupled modules.</p>
-
-<pre><code>    * API publisher
-    * API store
-    * API gateway
-    * API Key Manager
-</code></pre>
-
-<p>The API publisher module allows API publishers to easily define APIs and manage them
-using a strong governance model which consists of well-established concepts such as
-versioning and lifecycles. API consumers can use the API store module to discover
-published, production-ready APIs and access them in a secure and reliable manner
-using unique API keys.  The built-in API gateway module provides powerful tools to
-secure and control the load on individual APIs.</p>
-
-<p>WSO2 API Manager is based on the revolutionary WSO2 Carbon [Middleware a' la carte]
-framework. All the major features have been developed as reusable Carbon
-components.</p>
-
-<p>To learn more about WSO2 API Manager please visit <a href="http://wso2.com/products/api-manager">http://wso2.com/products/api-manager</a>.</p>
-
-<h1>
-<a id="key-features" class="anchor" href="#key-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Key Features</h1>
-
-<ul>
-<li><p>Design and Prototype APIs:<br>
-        - Design APIs, gather developer's feedback before implementing (API First Design).
-        - Design can be done from the publishing interface or via importing an existing swagger definition
-        - Deploy a prototyped API, provide early access to APIs, and get early feedback.
-        - Mock API implementation using Javascript.
-        - Support publishing SOAP, REST, JSON and XML style services as XML.     </p></li>
-<li><p>Create a Store of all Available APIs:<br>
-        - Graphical experience similar to Android Marketplace or Apple App Store.
-        - Browse APIs by provider, tags or name.
-        - Self-registration to developer community to subscribe to APIs.
-        - Subscribe to APIs and manage subscriptions on per-application basis.
-        - Subscriptions can be at different service tiers based on expected usage levels.
-        - Role based access to API Store; manage public and private APIs.
-        - Manage subscriptions at a per-developer level.
-        - Browse API documentation, download helpers for easy consumption.
-        - Comment on and rate APIs.
-        - Forum for discussing API usage issues (Available soon in future version).
-        - Try APIs directly on the store front.
-        - Internationalization (i18n) support.    </p></li>
-<li><p>Publishing and Governing API Use:<br>
-        - Publish APIs to external consumers and partners, as well as internal users.
-        - Supports publishing multiple protocols including SOAP, REST, JSON and XML style services as APIs.
-        - Manage API versions and deployment status by version.
-        - Govern the API lifecycle (publish, deprecate, retire).
-        - Attach documentation (files, external URLs) to APIs.
-        - Provision and Manage API keys.
-        - Track consumers per API.
-        - One-click deployment to API Gateway for immediate publishing.</p></li>
-<li><p>Control Access and Enforce Security:<br>
-    - Apply Security policies to APIs (authentication, authorization).
-        - Rely on OAuth2 standard for API access (implicit, authorization code, client, SAML, IWA Grant type).
-        - Restrict API access tokens to domains/IPs
-        - Block a subscription and restrict a complete application.
-        - Associate API available to system defined service tiers.
-        - Leverage XACML for entitlements management and fine grained authorization.
-        - Configire Single Sign-On (SSO) using SAML 2.0 for easy integartion with existing web apps.
-        - Powered by WSO2 Enterprise Service Bus.</p></li>
-<li><p>Route API Traffic:
-        - Supports API authentication with OAuth2.
-        - Extremely high performance pass-through message routing with sub-millisecond latency.
-        - Enforce rate limiting and throttling policies for APIs by consumer.
-        - Horizontally scalable with easy deployment into cluster using proven routing infrastructure.
-        - Scales to millions of developers/users.
-        - Capture all statistics and push to pluggable analytics system.
-        - Configure API routing policies with capabilities of WSO2 Enterprise Service Bus.
-        - Powered by WSO2 Enterprise Service Bus.            </p></li>
-<li><p>Manage Developer Community:<br>
-        - Self-sign up for API consumption.
-        - Manage user account including password reset.
-        - Developer interaction with APIs via comments and ratings.
-        - Support for developer communication via forums (Available soon in future version).
-        - Powered by WSO2 Identity Server.</p></li>
-<li><p>Govern Complete API Lifecycle:<br>
-        - Manage API lifecycle from cradle to grave: create, publish, block, deprecate and retire.
-        - Publish both production and sandbox keys for APIs to enable easy developer testing.
-        - Publish APIs to partner networks such as ProgrammableWeb (Available soon in future version).
-        - Powered by WSO2 Governance Registry.</p></li>
-<li><p>Monitor API Usage and Performance:<br>
-        - All API usage published to pluggable analytics framework.
-        - Out of the box support for WSO2 Business Activity Monitor and Google Analytics.
-        - View metrics by user, API and more.
-        - Customized reporting via plugging reporting engines.
-        - Monitor SLA compliance.
-        - Powered by WSO2 Business Activity Monitor.      </p></li>
-<li><p>Pluggable, Extensible and Themeable:<br>
-        - All components are highly customizable thru styling, theming and open source code.
-        - Storefront implemented with Jaggery (jaggeryjs.org) for easy customization.
-        - Pluggable to third party analytics systems and billing systems (Available soon in future version).
-        - Pluggable to existing user stores including via JDBC and LDAP.
-        - Components usable separately - storefront can be used to front APIs gatewayed via third party gateways such as Intel Expressway Service Gateway.
-        - Support for Single Sign On (SSO) using SAML 2.0 for easy integration with existing web apps</p></li>
-<li><p>Easily Deployable in Enterprise Setting:<br>
-        - Role based access control for managing users and their authorization levels.
-        - Store front can be deployed in DMZ for external access with Publisher inside the firewall for private control.
-        - Different user stores for developer focused store-front and internal operations in publisher.
-        - Integrates with enterprise identity systems including LDAP and Microsoft Active Directory.
-        - Gateway can be deployed in DMZ with controlled access to WSO2 Identity Server (for authentication/authorization) and governance database behind firewall.</p></li>
-<li><p>Support for creating multi-tenanted APIs<br>
-        - Run a single instance and provide API Management to multiple customers
-        - Share APIs between different departments in a large enterprise</p></li>
-<li><p>Publishing and Governing API Use<br>
-        - Document an API using Swagger
-        - Restrict API Access tokens to domains/IPs
-        - Ability to block a subscription and restricting a complete application
-        - Ability to revoke access tokens
-        - Separate validity period configuration for Application Access Token
-        - OAuth2 Authorization Code Grant Type Support
-        - Configuring execution point of mediation extensions</p></li>
-<li><p>Monitor API Usage and Performance<br>
-        - Improved dashboard for monitoring usage statistics (Filtering data for a date range, More visually appealing widgets)       </p></li>
-</ul>
-
-<h1>
-<a id="system-requirements" class="anchor" href="#system-requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System Requirements</h1>
-
-<ol>
-<li>Minimum memory - 2GB</li>
-<li>Processor      - Pentium 800MHz or equivalent at minimum</li>
-<li>Java 1.7 or higher</li>
-<li>The Management Console requires you to enable Javascript of the Web browser,
-with MS IE 6 and 7. In addition to JavaScript, ActiveX should also be enabled
-with IE. This can be achieved by setting your security level to
-medium or lower.</li>
-<li>To compile and run the sample clients, an Ant version is required. Ant 1.7.0
-version is recommended</li>
-<li>To build WSO2 API Manager from the Source distribution, it is necessary that you have
-JDK 1.7 version and Maven 3.0.4 or later</li>
-</ol>
-
-<h1>
-<a id="installation--running" class="anchor" href="#installation--running" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation &amp; Running</h1>
-
-<ol>
-<li>Extract the wso2am-2.0.0.zip and go to the 'bin' directory</li>
-<li>Run the wso2server.sh or wso2server.bat as appropriate</li>
-<li>API Publisher web application is running at http://localhost:9763/publisher. You may login
-to the Publisher using the default administrator credentials (user: admin, pass: admin).</li>
-<li>API Store web application is running at http://localhost:9763/store. You may login
-to the Store using the default administrator credentials (user: admin, pass: admin).</li>
-</ol>
-
-<h1>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h1>
-
-<p>On-line product documentation is available at:
-        <a href="http://docs.wso2.org/wiki/display/AM200/WSO2+API+Manager+Documentation">http://docs.wso2.org/wiki/display/AM200/WSO2+API+Manager+Documentation</a></p>
-
-<h1>
-<a id="support" class="anchor" href="#support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support</h1>
-
-<p>WSO2 Inc. offers a variety of development and production support
-programs, ranging from Web-based support up through normal business
-hours, to premium 24x7 phone support.</p>
-
-<p>For additional support information please refer to <a href="http://wso2.com/support">http://wso2.com/support</a></p>
-
-<p>For more information on WSO2 API Manager please visit <a href="http://wso2.com/products/api-manager">http://wso2.com/products/api-manager</a></p>
-
-<h1>
-<a id="known-issues-of-wso2-api-manager" class="anchor" href="#known-issues-of-wso2-api-manager" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Known issues of WSO2 API Manager</h1>
-
-<p>All known issues of WSO2 API Manager are filed at:</p>
-
-<pre><code>https://wso2.org/jira/issues/?filter=12237
-</code></pre>
-
-<h1>
-<a id="issue-tracker" class="anchor" href="#issue-tracker" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issue Tracker</h1>
-
-<p>Help us make our software better. Please submit any bug reports or feature
-requests through the WSO2 JIRA system:</p>
-
-<pre><code>https://wso2.org/jira/browse/APIMANAGER
-</code></pre>
-
-<h1>
-<a id="crypto-notice" class="anchor" href="#crypto-notice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Crypto Notice</h1>
-
-<p>This distribution includes cryptographic software.  The country in
-   which you currently reside may have restrictions on the import,
-   possession, use, and/or re-export to another country, of
-   encryption software.  BEFORE using any encryption software, please
-   check your country's laws, regulations and policies concerning the
-   import, possession, or use, and re-export of encryption software, to
-   see if this is permitted.  See <a href="http://www.wassenaar.org/">http://www.wassenaar.org/</a> for more
-   information.</p>
-
-<p>The U.S. Government Department of Commerce, Bureau of Industry and
-   Security (BIS), has classified this software as Export Commodity
-   Control Number (ECCN) 5D002.C.1, which includes information security
-   software using or performing cryptographic functions with asymmetric
-   algorithms.  The form and manner of this Apache Software Foundation
-   distribution makes it eligible for export under the License Exception
-   ENC Technology Software Unrestricted (TSU) exception (see the BIS
-   Export Administration Regulations, Section 740.13) for both object
-   code and source code.</p>
-
-<p>The following provides more details on the included cryptographic
-   software:</p>
-
-<p>Apache Rampart   : <a href="http://ws.apache.org/rampart/">http://ws.apache.org/rampart/</a>
-   Apache WSS4J     : <a href="http://ws.apache.org/wss4j/">http://ws.apache.org/wss4j/</a>
-   Apache Santuario : <a href="http://santuario.apache.org/">http://santuario.apache.org/</a>
-   Bouncycastle     : <a href="http://www.bouncycastle.org/">http://www.bouncycastle.org/</a></p>
-
-<hr>
-
-<p>(c) Copyright 2015 WSO2 Inc.</p>
-        </section>
-
-        <footer>
-          WSO2 API Manager is maintained by <a href="https://github.com/malinthaprasan">malinthaprasan</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<body>
+<nav class="navbar navbar-fixed-top">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://docs.wso2.com/api-manager">
+            <img src="assets/images/logo.png" alt="WSO2 Api manager" title="WSO2 Api Manager Documentation">
+        </a>
     </div>
-  </body>
+    <div id="navbar" class="collapse navbar-collapse pull-right">
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#menu-toggle" id="menu-toggle" class="button-primary"><span
+                        class="glyphicon glyphicon-list"></span> Navigation</a>
+            </li>
+        </ul>
+    </div><!--/.nav-collapse -->
+</nav>
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <nav class="bs-docs-sidebar" id="navbar">
+            <h3>Overview</h3>
+            <ul class="nav nav-stacked fixed">
+                <li class="section-box">
+                    <ul class="nav nav-stacked">
+                        <li id="ov-index"><a href="index.html">Introduction</a></li>
+                        <li id="ov-guide"><a href="#guide">Getting Started</a></li>
+                        <li id="ov-configuring-rest-api"><a href="#configuring-rest-api">Configuring the REST API</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Resources</h3>
+            <ul class="nav nav-stacked fixed">
+                        <hr/>
+                        <span class="class-name">API (Collection)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-apisGet"><a href="#!/operations#APICollection#apisGet">Retrieve/Search APIs 
+</a></li>
+                                        <li id="op-apisPost"><a href="#!/operations#APICollection#apisPost">Create a new API</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">API (Individual)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-apisApiIdDelete"><a href="#!/operations#APIIndividual#apisApiIdDelete">Delete an API</a></li>
+                                        <li id="op-apisApiIdGet"><a href="#!/operations#APIIndividual#apisApiIdGet">Get details of an API</a></li>
+                                        <li id="op-apisApiIdPut"><a href="#!/operations#APIIndividual#apisApiIdPut">Update an API</a></li>
+                                        <li id="op-apisApiIdSwaggerGet"><a href="#!/operations#APIIndividual#apisApiIdSwaggerGet">Get swagger definition</a></li>
+                                        <li id="op-apisApiIdSwaggerPut"><a href="#!/operations#APIIndividual#apisApiIdSwaggerPut">Update swagger definition</a></li>
+                                        <li id="op-apisApiIdThumbnailGet"><a href="#!/operations#APIIndividual#apisApiIdThumbnailGet">Get thumbnail image</a></li>
+                                        <li id="op-apisApiIdThumbnailPost"><a href="#!/operations#APIIndividual#apisApiIdThumbnailPost">Upload a thumbnail image</a></li>
+                                        <li id="op-apisChangeLifecyclePost"><a href="#!/operations#APIIndividual#apisChangeLifecyclePost">Change API Status</a></li>
+                                        <li id="op-apisCopyApiPost"><a href="#!/operations#APIIndividual#apisCopyApiPost">Create a new API version</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Application (Individual)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-applicationsApplicationIdGet"><a href="#!/operations#ApplicationIndividual#applicationsApplicationIdGet">Get details of an application</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Document (Collection)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-apisApiIdDocumentsGet"><a href="#!/operations#DocumentCollection#apisApiIdDocumentsGet">Get a list of documents of an API</a></li>
+                                        <li id="op-apisApiIdDocumentsPost"><a href="#!/operations#DocumentCollection#apisApiIdDocumentsPost">Add a new document to an API</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Document (Individual)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-apisApiIdDocumentsDocumentIdContentGet"><a href="#!/operations#DocumentIndividual#apisApiIdDocumentsDocumentIdContentGet">Get the content of an API document</a></li>
+                                        <li id="op-apisApiIdDocumentsDocumentIdContentPost"><a href="#!/operations#DocumentIndividual#apisApiIdDocumentsDocumentIdContentPost">Upload the content of an API document</a></li>
+                                        <li id="op-apisApiIdDocumentsDocumentIdDelete"><a href="#!/operations#DocumentIndividual#apisApiIdDocumentsDocumentIdDelete">Delete a document of an API</a></li>
+                                        <li id="op-apisApiIdDocumentsDocumentIdGet"><a href="#!/operations#DocumentIndividual#apisApiIdDocumentsDocumentIdGet">Get a document of an API</a></li>
+                                        <li id="op-apisApiIdDocumentsDocumentIdPut"><a href="#!/operations#DocumentIndividual#apisApiIdDocumentsDocumentIdPut">Update a document of an API</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Environment (Collection)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-environmentsGet"><a href="#!/operations#EnvironmentCollection#environmentsGet">Get all gateway environments</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Subscription (Collection)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-subscriptionsGet"><a href="#!/operations#SubscriptionCollection#subscriptionsGet">Get all Subscriptions</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Subscription (Individual)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-subscriptionsBlockSubscriptionPost"><a href="#!/operations#SubscriptionIndividual#subscriptionsBlockSubscriptionPost">Block a subscription</a></li>
+                                        <li id="op-subscriptionsSubscriptionIdGet"><a href="#!/operations#SubscriptionIndividual#subscriptionsSubscriptionIdGet">Get details of a subscription</a></li>
+                                        <li id="op-subscriptionsUnblockSubscriptionPost"><a href="#!/operations#SubscriptionIndividual#subscriptionsUnblockSubscriptionPost">Unblock a Subscription</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Throttling Tier (Collection)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-tiersTierLevelGet"><a href="#!/operations#ThrottlingTierCollection#tiersTierLevelGet">Get all tiers</a></li>
+                                        <li id="op-tiersTierLevelPost"><a href="#!/operations#ThrottlingTierCollection#tiersTierLevelPost">Create a Tier</a></li>
+                            </ul>
+                        </li>
+                        <hr/>
+                        <span class="class-name">Throttling Tier (Individual)</span>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                        <li id="op-tiersTierLevelTierNameDelete"><a href="#!/operations#ThrottlingTierIndividual#tiersTierLevelTierNameDelete">Delete a Tier</a></li>
+                                        <li id="op-tiersTierLevelTierNameGet"><a href="#!/operations#ThrottlingTierIndividual#tiersTierLevelTierNameGet">Get details of a tier</a></li>
+                                        <li id="op-tiersTierLevelTierNamePut"><a href="#!/operations#ThrottlingTierIndividual#tiersTierLevelTierNamePut">Update a Tier</a></li>
+                                        <li id="op-tiersUpdatePermissionPost"><a href="#!/operations#ThrottlingTierIndividual#tiersUpdatePermissionPost">Update tier permission</a></li>
+                            </ul>
+                        </li>
+            </ul>
+            <h3>Definitions</h3>
+            <ul class="nav nav-stacked fixed">
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-API"><a href="#!/models#API">API</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-APIInfo"><a href="#!/models#APIInfo">APIInfo</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-APIList"><a href="#!/models#APIList">APIList</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-API_businessInformation"><a href="#!/models#API_businessInformation">API_businessInformation</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-API_corsConfiguration"><a href="#!/models#API_corsConfiguration">API_corsConfiguration</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-API_endpointSecurity"><a href="#!/models#API_endpointSecurity">API_endpointSecurity</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-API_maxTps"><a href="#!/models#API_maxTps">API_maxTps</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Application"><a href="#!/models#Application">Application</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Document"><a href="#!/models#Document">Document</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-DocumentList"><a href="#!/models#DocumentList">DocumentList</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Environment"><a href="#!/models#Environment">Environment</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-EnvironmentEndpoints"><a href="#!/models#EnvironmentEndpoints">EnvironmentEndpoints</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-EnvironmentList"><a href="#!/models#EnvironmentList">EnvironmentList</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Error"><a href="#!/models#Error">Error</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-ErrorListItem"><a href="#!/models#ErrorListItem">ErrorListItem</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-FileInfo"><a href="#!/models#FileInfo">FileInfo</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Sequence"><a href="#!/models#Sequence">Sequence</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Subscription"><a href="#!/models#Subscription">Subscription</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-SubscriptionList"><a href="#!/models#SubscriptionList">SubscriptionList</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-Tier"><a href="#!/models#Tier">Tier</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-TierList"><a href="#!/models#TierList">TierList</a></li>
+                            </ul>
+                        </li>
+                        <li class="section-box">
+                            <ul class="nav nav-stacked">
+                                <li id="def-TierPermission"><a href="#!/models#TierPermission">TierPermission</a></li>
+                            </ul>
+                        </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid main-content">
+            <div class="row" class="">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="non-sidebar">
+                        <div class="main-content">
+                            <h2>Introduction</h2>
+
+                            <p class="marked">This specifies a **RESTful API** for WSO2 **API Manager** - Publisher.
+
+Please see [full swagger definition](https://raw.githubusercontent.com/wso2/carbon-apimgt/v6.0.4/components/apimgt/org.wso2.carbon.apimgt.rest.api.publisher/src/main/resources/publisher-api.yaml) of the API which is written using [swagger 2.0](http://swagger.io/) specification.
+</p>
+
+                            <div class="sect2">
+                                    <h3>Version information</h3>
+
+                                    <div class="paragraph">
+                                        <p class="marked">0.10.0</p>
+                                    </div>
+
+                                        <h3>Contact information</h3>
+
+                                        <div class="paragraph">
+                                            <p class="marked">Contact: <a href="http://wso2.com/products/api-manager/">WSO2</a></p>
+
+                                            <p>Email: architecture@wso2.com</p>
+                                        </div>
+
+                                        <h3>License information</h3>
+
+                                        <div class="paragraph">
+                                            <p class="marked">License: Apache 2.0</p>
+
+                                            <p class="marked">URL: http://www.apache.org/licenses/LICENSE-2.0.html</p>
+                                        </div>
+
+                                    <h3>URI Scheme</h3>
+
+                                    <div class="paragraph">
+                                        <p class="marked">Host: apis.wso2.com</p>
+
+                                        <p class="marked">BasePath: /api/am/publisher/v0.10</p>
+                                        <code>Scheme: [HTTPS]</code>
+                                    </div>
+                                    <h3>Consumes</h3>
+
+                                    <div class="paragraph">
+                                        <code>[application/json]</code>
+                                    </div>
+                                    <h3>Produces</h3>
+
+                                    <div class="paragraph">
+                                        <code>[application/json]</code>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+</div>
+<!-- /#wrapper -->
+</body>
+
 </html>
