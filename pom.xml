@@ -902,7 +902,7 @@
     <properties>
 
         <project.scm.id>scm-server</project.scm.id>
-        <carbon.analytics.common.version>5.1.4</carbon.analytics.common.version>
+        <carbon.analytics.common.version>5.1.5</carbon.analytics.common.version>
 
         <!-- APIM Component Version -->
         <carbon.apimgt.version>9.9.9-SNAPSHOT</carbon.apimgt.version>
