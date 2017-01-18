@@ -77,7 +77,7 @@ public class WebSocketAPITestCase extends APIMIntegrationBaseTest {
     private final String apiName = "WebSocketAPI";
     private final String applicationName = "WebSocketApplication";
     private final String testMessage = "Web Socket Test Message";
-    private final int inboundWebSocketPort = 9099;
+    private final int inboundWebSocketPort = 9599;
     private String apiEndPoint;
     private APIPublisherRestClient apiPublisher;
     private String provider;
